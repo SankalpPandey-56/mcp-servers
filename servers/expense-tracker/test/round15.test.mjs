@@ -3,6 +3,7 @@
  * forward past `to` and then describe the result as "covers <cutoff> onwards", a sentence
  * about a range that cannot exist. Nothing was read and the note said the opposite.
  */
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

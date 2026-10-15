@@ -3,6 +3,7 @@
 // A model relays that name, the caller pastes it, and nothing exists on the other end.
 // The scan below is the general form: every "<tool> {" citation inside a response string
 // has to be a tool this server actually registers.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, readdirSync } from "node:fs";

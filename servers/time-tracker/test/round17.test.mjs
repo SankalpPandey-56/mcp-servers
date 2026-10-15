@@ -1,6 +1,7 @@
 // Round 17, docs/USER_VALUE_R17.md, D-R85: an empty store must read as "nothing logged
 // yet, entry_add creates a project automatically" rather than a bare "No entries found",
 // which reads to a model as "this does not exist, ask before writing".
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

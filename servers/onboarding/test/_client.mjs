@@ -1,5 +1,6 @@
 // Shared stdio JSON-RPC client for the mcp-onboarding suites.
 // One sandboxed data home per client, so no test can see another's hires.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { spawn, execFileSync } from "node:child_process";
 import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";

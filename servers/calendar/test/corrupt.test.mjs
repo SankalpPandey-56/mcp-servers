@@ -1,5 +1,6 @@
 // A damaged data dir must never be reported as "no calendars": the next import would
 // then overwrite an index that is still on disk.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

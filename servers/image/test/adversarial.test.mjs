@@ -2,7 +2,7 @@
 // fixes. Every fixture is generated here; nothing binary is committed.
 import test from "node:test";
 import assert from "node:assert/strict";
-import { existsSync, readFileSync, readdirSync, mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, mkdirSync, writeFileSync, rmSync } from "node:fs";
 import { deflateSync } from "node:zlib";
 import { join } from "node:path";
 import { client, sandbox, sha256, proKey, makePng, makeJpeg, noisy } from "./_client.mjs";
@@ -95,8 +95,9 @@ test("the bomb guard covers JPEG, GIF, BMP and TIFF, not only PNG", async () => 
   } finally { c.close(); }
 });
 
-test("a 60 MB file is refused on its size before a byte is decoded", async () => {
+test("a 60 MB file is refused on its size before a byte is decoded", async (ctx) => {
   const { dir, dataHome } = sandbox("adv-big-");
+  ctx.after(() => rmSync(dir, { recursive: true, force: true }));
   const base = readFileSync(await makeJpeg(join(dir, "a.jpg"), 200, 150, 90));
   const big = join(dir, "big.jpg");
   writeFileSync(big, Buffer.concat([base, Buffer.alloc(60 * 1024 * 1024 - base.length, 0x20)]));

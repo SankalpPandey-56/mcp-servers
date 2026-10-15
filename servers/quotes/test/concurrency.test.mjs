@@ -1,6 +1,7 @@
 // Two processes, one data dir. The risk is the id counter, not the quote list: a lost
 // row shows up in a count, a REISSUED id (two different quotes both called Q-2026-0007,
 // one of them already emailed to a client) does not.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";

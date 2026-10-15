@@ -2,6 +2,7 @@
 // window that lies entirely before the 7-day floor used to read identically to an empty
 // month - "No entries found" plus "the free tier shows the last 7 days". One says nothing
 // was logged, the other says nothing was read. The unread window must now say so.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

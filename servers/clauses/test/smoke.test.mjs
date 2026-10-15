@@ -1,6 +1,7 @@
 // The server over real stdio JSON-RPC: initialize, tools/list, search, and a full assembly
 // whose .docx is read back with the docx server's own engine, so "it wrote a file" is never
 // the assertion. Then the free own-clause cap, and the same call passing in Pro.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

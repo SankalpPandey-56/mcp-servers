@@ -1,4 +1,5 @@
 // Document engine: build, read back, markdown, template fill.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";

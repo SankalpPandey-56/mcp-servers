@@ -5,6 +5,7 @@
 // drops the real built suite into it and points it at stub children. The stubs are plain
 // stdio JSON-RPC servers: no SDK, so their behaviour (a flood of stderr, a rejected
 // license key) is exactly what the test needs to provoke.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

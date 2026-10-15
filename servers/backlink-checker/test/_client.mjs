@@ -1,6 +1,7 @@
 // Shared stdio JSON-RPC client for the mcp-backlink-checker suites.
 // This server is stateless — no data dir is written — but the same client shape
 // is kept so the contract suite reads like every other suite in the estate.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { spawn, execFileSync } from "node:child_process";
 import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";

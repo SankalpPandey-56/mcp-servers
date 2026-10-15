@@ -1,10 +1,11 @@
 // Adversarial probes for mcp-resume, run over real stdio JSON-RPC where the defect is a
 // protocol-level one and in-process where it is a pure function. Every generated .docx is
 // read back with the docx engine, so "a file appeared" is never the assertion.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
-import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, readdirSync, statSync } from "node:fs";
+import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, readdirSync, statSync, rmSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { tmpdir } from "node:os";
 import { join, dirname } from "node:path";
@@ -190,10 +191,11 @@ test("out_path: an existing file is never clobbered without overwrite", async ()
   c.close();
 });
 
-test("resume_read refuses what is not a Word document and survives a 50 MB one", async () => {
+test("resume_read refuses what is not a Word document and survives a 50 MB one", async (ctx) => {
   const c = client();
   await c.init();
   const dir = mkdtempSync(join(tmpdir(), "mcp-resume-read-"));
+  ctx.after(() => rmSync(dir, { recursive: true, force: true }));
   const txt = join(dir, "cv.txt");
   writeFileSync(txt, "hello");
   const a = await c.call("resume_read", { path: txt });

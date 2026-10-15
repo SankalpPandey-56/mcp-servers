@@ -2,6 +2,7 @@
 // (business_set -> invoice_business_set / docx_business_set) the child's own prose still
 // named the tool that no longer exists. The proxy now rewrites the child's text and
 // publishes a tools_map resource.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

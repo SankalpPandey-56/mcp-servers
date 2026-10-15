@@ -1,6 +1,7 @@
 // Two server processes on one data dir must not lose writes, and must never hand out
 // the same task id twice: the id counter lives in the file, so an unlocked
 // load-mutate-save cycle would reissue it.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

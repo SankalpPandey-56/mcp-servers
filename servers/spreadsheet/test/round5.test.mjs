@@ -1,5 +1,6 @@
 // Round-5 defects: D-R11 (tool descriptions claim the file case), D-R12 (money ending in
 // .00 was written as text), D-R13 (a money formula emitted raw floats).
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

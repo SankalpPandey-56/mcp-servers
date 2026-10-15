@@ -1,5 +1,6 @@
 // D-6: sheet_query aggregation - group_by + aggregate + sort on an aggregate alias,
 // so "which rep sold the most units in the North region, top 5" is one call.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

@@ -4,6 +4,7 @@
 // judgement: JSON-RPC-only stdout, tool-description hygiene, corrupt-store quarantine,
 // no partial file on a write cap, and the free/Pro tier switch. It never asserts a
 // number a human chose; those live in the server's own suites.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

@@ -1,5 +1,6 @@
 // Round-7 fix (docs/USER_VALUE_R7.md): D-R28 - hours put on an invoice are stamped by
 // entry_mark_billed and disappear from invoice_summary and report until unbilled_only:false.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

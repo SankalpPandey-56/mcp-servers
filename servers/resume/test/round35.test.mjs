@@ -1,6 +1,7 @@
 // Loop 35, defect ledger D-R75 second half (docs/USER_VALUE_R14.md): tailor_to_job's
 // keyword extractor counted measured non-keywords ("similar", "record", "reducing") in
 // the target set, deflating the coverage figure it reported. They are stopwords now.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { mkdtempSync } from "node:fs";

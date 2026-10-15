@@ -4,6 +4,7 @@
 // It uses its own stdio client rather than test/_client.mjs, because that one throws on
 // the first non-JSON stdout line; this suite has to SEE such a line to assert it is not
 // there. The fixture builders are shared.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

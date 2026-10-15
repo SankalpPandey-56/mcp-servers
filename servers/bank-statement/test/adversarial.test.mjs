@@ -1,4 +1,5 @@
 // Adversarial input, docs/BANK_AUDIT.md part 1. Each test is one probe that changed the code.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

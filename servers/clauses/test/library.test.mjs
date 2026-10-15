@@ -1,5 +1,6 @@
 // The library logic on its own: the starter set, search ranking, variable extraction,
 // filling with bracketed prompts for what is missing, and the markdown import round trip.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { mkdtempSync } from "node:fs";

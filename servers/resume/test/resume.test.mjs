@@ -1,6 +1,7 @@
 // Unit tests for the pure parts: storage round trip, keyword matching, the page budget,
 // and the one property the cover letter must never break -- it states no fact the
 // profile does not contain.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { mkdtempSync } from "node:fs";

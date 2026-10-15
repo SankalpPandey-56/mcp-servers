@@ -1,5 +1,6 @@
 // Shared stdio JSON-RPC client for the mcp-deposits suites. One sandboxed data dir per
 // client, so no test can see another's register.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { spawn, execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";

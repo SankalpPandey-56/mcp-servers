@@ -4,6 +4,7 @@
  * offered clause_update - which reads as "you wrote this before". A model spent four extra
  * calls searching for a clause of the caller's that was never there.
  */
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

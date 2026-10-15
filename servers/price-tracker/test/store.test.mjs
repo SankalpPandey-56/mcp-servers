@@ -3,6 +3,7 @@
  * an empty one. Only ENOENT means "no data yet"; corrupt bytes are moved aside
  * and every tool fails until that is resolved.
  */
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

@@ -1,6 +1,7 @@
 // The server over real stdio JSON-RPC: initialize, tools/list, and one pass of the
 // whole application flow. The generated .docx is read back with the docx server's own
 // engine (@theluckystrike/mcp-docx/lib), so "it wrote a file" is never the assertion.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

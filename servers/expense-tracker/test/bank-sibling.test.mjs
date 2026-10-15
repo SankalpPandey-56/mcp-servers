@@ -4,6 +4,7 @@
 // the same session. This tests the sibling-store line added to close that gap: present when
 // bank-statement has transactions in the requested period, absent when it does not exist,
 // is corrupt, or holds nothing in range.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

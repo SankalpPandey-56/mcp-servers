@@ -1,5 +1,6 @@
 // D-3: per-entry currency ("90 euros an hour" -> EUR 225.00, never "$")
 // D-7: a partial project name that matches exactly one existing project is used, ambiguity is listed.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

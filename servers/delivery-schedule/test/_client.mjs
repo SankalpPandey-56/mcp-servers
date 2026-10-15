@@ -1,5 +1,6 @@
 // Shared stdio JSON-RPC client for the mcp-delivery-schedule suites.
 // One sandboxed data dir per client, so no test can see another's schedules.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { spawn, execFileSync } from "node:child_process";
 import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";

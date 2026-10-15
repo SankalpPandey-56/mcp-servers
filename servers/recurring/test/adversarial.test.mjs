@@ -5,6 +5,7 @@
  * because of one. Nothing here touches the network and every run gets a fresh
  * XDG_DATA_HOME, so the invoice number series starts at 0001 in every case.
  */
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

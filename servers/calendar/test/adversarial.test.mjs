@@ -2,10 +2,11 @@
  * Adversarial cases from docs/CALENDAR_AUDIT.md. One test per fixed defect, so a
  * regression fails here rather than in a user's week.
  */
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
-import { mkdtempSync, writeFileSync, readFileSync, mkdirSync } from "node:fs";
+import { mkdtempSync, writeFileSync, readFileSync, mkdirSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import {
@@ -265,8 +266,9 @@ test("event_to_time_entry carries the currency and matches the event to the minu
   assert.equal(args.billable, true);
 });
 
-test("a 20,000-event 5 MB export imports, lists and is not re-parsed on every call", async () => {
+test("a 20,000-event 5 MB export imports, lists and is not re-parsed on every call", async (ctx) => {
   const dir = mkdtempSync(join(tmpdir(), "cal-big-"));
+  ctx.after(() => rmSync(dir, { recursive: true, force: true }));
   const src = join(dir, "big.ics");
   const parts = ["BEGIN:VCALENDAR\r\nVERSION:2.0\r\n"];
   for (let i = 0; i < 20000; i++) {

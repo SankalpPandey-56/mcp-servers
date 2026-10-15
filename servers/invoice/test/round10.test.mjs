@@ -5,6 +5,7 @@
 // far the total sits from the exact converted amount, and round_total: true switches
 // the line to the other basis: round the exact total once so it matches the exact
 // converted amount to the cent (unit_price is then reported, not multiplied).
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

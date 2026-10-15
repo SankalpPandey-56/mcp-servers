@@ -9,6 +9,7 @@
 // note existed against an invoice in the billing-docs store, while
 // `statement-of-account` already nets credit notes correctly. This mirrors that netting
 // with a read-only, best-effort peek at billing-docs' `credit-notes.json`.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

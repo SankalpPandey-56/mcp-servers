@@ -1,5 +1,6 @@
 // A damaged data dir must never be reported as "no transactions": the next import would
 // then overwrite a year of statements that is still on disk.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

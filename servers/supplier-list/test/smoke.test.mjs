@@ -1,6 +1,7 @@
 // End to end over stdio JSON-RPC, the way a client drives it: add suppliers, list
 // and search the directory, read and change a record, stamp reviews, run the
 // due-review report, export CSV and Markdown, remove rows, and hit the free-tier cap.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

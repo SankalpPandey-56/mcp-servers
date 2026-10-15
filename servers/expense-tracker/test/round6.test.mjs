@@ -1,6 +1,7 @@
 // Round-6 fixes (docs/USER_VALUE_R6.md): D-R20 an empty rebill set asserts nothing about
 // lines it does not have, D-R21 billable defaults to true when a project is given, D-R23
 // the .corrupt marker is self-describing JSON.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

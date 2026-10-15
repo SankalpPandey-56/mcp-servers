@@ -1,4 +1,5 @@
 // D-R14: a multi-currency unbilled set now has a path to ONE invoice.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

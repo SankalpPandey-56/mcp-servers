@@ -5,6 +5,7 @@
 // Pro key. client_add now refuses an exact match by id, and client_delete removes a
 // client nothing references. A client that IS referenced is refused with the document
 // named, so an issued invoice can never lose the party it bills.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

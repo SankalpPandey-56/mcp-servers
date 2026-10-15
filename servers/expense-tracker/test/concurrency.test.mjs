@@ -1,6 +1,7 @@
 // Two server processes on one data dir must not lose writes.
 // Without the advisory lock around load-mutate-save, interleaved read-modify-write
 // cycles silently drop roughly half of these adds.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

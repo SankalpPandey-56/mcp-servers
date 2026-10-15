@@ -1,4 +1,5 @@
 // Regressions for the hostile-input probes in docs/EXPENSE_AUDIT.md.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

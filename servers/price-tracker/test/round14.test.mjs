@@ -14,6 +14,7 @@
  * hand, then assert that every printed price for that watch carries the same scale, and
  * that a whole-unit price is still printed whole (padding one would be wrong for JPY).
  */
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

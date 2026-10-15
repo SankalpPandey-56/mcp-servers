@@ -1,5 +1,6 @@
 // Shared stdio JSON-RPC client and image fixture builders for the mcp-image tests.
 // Every fixture is generated here with jimp; nothing binary is committed.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { spawn, execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";

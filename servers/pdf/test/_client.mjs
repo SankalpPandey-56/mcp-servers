@@ -1,4 +1,5 @@
 // Shared stdio JSON-RPC client and PDF fixture builders for the mcp-pdf tests.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { spawn, execFileSync } from "node:child_process";
 import { mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";

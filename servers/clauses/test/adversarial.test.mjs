@@ -1,6 +1,7 @@
 // Adversarial probes: hostile arguments, hostile file paths, hostile content, and the
 // invariants a clause library must not lose (the not-legal-advice note, JSON-RPC-only
 // stdout, no network). Every assertion reads the artefact back, never the answer alone.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

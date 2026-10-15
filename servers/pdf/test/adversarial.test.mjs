@@ -3,7 +3,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
-import { readFileSync, writeFileSync, existsSync, statSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, statSync, rmSync } from "node:fs";
 import { join } from "node:path";
 import { PDFDocument, StandardFonts, PDFName, rgb } from "pdf-lib";
 import { client, proKey, sandbox, makePdf } from "./_client.mjs";
@@ -175,8 +175,9 @@ test("rotate says when nothing turned, and that 450 is 90", async () => {
   c.close();
 });
 
-test("a 200 MB input is refused before it is read, and a 2000-page file is handled", async () => {
+test("a 200 MB input is refused before it is read, and a 2000-page file is handled", async (ctx) => {
   const { dir, dataHome } = sandbox("mcp-pdf-scale-");
+  ctx.after(() => rmSync(dir, { recursive: true, force: true }));
   const small = await makePdf(join(dir, "s.pdf"), 1, "S");
   const huge = join(dir, "huge.pdf");
   const fh = await import("node:fs");

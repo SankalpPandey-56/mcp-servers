@@ -2,6 +2,7 @@
 // used to say only "Wrote N expenses" while a line the project filter dropped (an
 // unprojected mileage line) left the week total short without a word. The response must
 // now count what the filters excluded and name the active filter.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

@@ -1,5 +1,6 @@
 // Shared stdio JSON-RPC client and store seeders for the mcp-statement-of-account suites.
 // One sandboxed data dir per client, so no test can see another's books.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { spawn, execFileSync } from "node:child_process";
 import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";

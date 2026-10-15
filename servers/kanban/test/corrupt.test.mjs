@@ -1,5 +1,6 @@
 // A damaged data.json must never be reported as "no tasks": the next task_add would
 // then overwrite a board that is still on disk.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

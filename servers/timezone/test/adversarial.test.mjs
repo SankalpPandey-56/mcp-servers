@@ -2,6 +2,7 @@
  * Adversarial probes, docs/TIMEZONE_AUDIT.md. Every test here is a probe that either
  * failed before the audit or guards a bound that a caller can otherwise blow past.
  */
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

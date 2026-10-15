@@ -1,6 +1,7 @@
 // Contract: the version a server announces in the MCP handshake (serverInfo.version)
 // must equal the version in its own package.json. Before v0.6.1 these were independent
 // string literals in src/index.ts and drifted up to five releases behind.
+import "./_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

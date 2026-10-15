@@ -1,6 +1,7 @@
 // Round-6 fixes (docs/USER_VALUE_R6.md): D-R18 apply_to_existing re-rates every entry,
 // D-R22 tag grouping is free and group_by is optional, D-R23 the .corrupt marker is
 // self-describing JSON.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

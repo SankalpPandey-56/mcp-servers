@@ -1,6 +1,7 @@
 // Loop 35, defect ledger D-R81 (docs/USER_VALUE_R15.md): on the free tier clause_search
 // skips the tag filter and said so, but did not name the free tool that has the answer -
 // clause_list returns every clause's tags. The skip message must now point at it.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

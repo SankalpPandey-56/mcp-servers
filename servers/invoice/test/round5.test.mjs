@@ -1,5 +1,6 @@
 // D-R14: invoice_create must not bill a EUR line under a USD heading.
 // D-R15: "today" is the LOCAL calendar date in invoice, expense-tracker and time-tracker.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

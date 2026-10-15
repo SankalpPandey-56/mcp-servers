@@ -1,6 +1,7 @@
 // Two server processes on one data dir must not lose an imported statement. Without the
 // advisory lock the load-mutate-save cycles interleave and each process saves a ledger
 // that is missing the other's transactions.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

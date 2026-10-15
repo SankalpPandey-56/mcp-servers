@@ -3,6 +3,7 @@
 // server's counter and writes both stores; without the recurring -> invoice lock order
 // two simultaneous runs produce two invoices for the same period, or two invoices with
 // the same number.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

@@ -1,6 +1,7 @@
 // Codex v3 fixes: #1 corrupt store, #18 rate strings, #19 rate snapshot, #20 inclusive
 // date-only bounds, #21/#22/#23 clipping and midnight splits, #24 explicit offsets,
 // #26 tag totals, #27 mixed-currency JSON, #29 one project resolver everywhere.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

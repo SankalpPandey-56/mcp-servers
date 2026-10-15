@@ -1,5 +1,6 @@
 // Two server processes on one data dir must not lose writes.
 // Before the advisory lock this stored 20 of 40 entries (docs/AUDIT.md).
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

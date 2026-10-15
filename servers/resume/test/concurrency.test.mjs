@@ -1,6 +1,7 @@
 // Two server processes on one data dir writing profile variants at the same time.
 // profiles.json is a single file holding every variant, so an unlocked read-modify-write
 // loses whichever write landed second.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

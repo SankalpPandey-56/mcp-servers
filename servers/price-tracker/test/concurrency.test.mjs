@@ -1,6 +1,7 @@
 // Two server processes on one data dir must not lose writes.
 // Same read-modify-write shape as the time-tracker loss measured in docs/AUDIT.md.
 // Pro key: the free tier caps watches at 3.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { execFileSync, spawn } from "node:child_process";

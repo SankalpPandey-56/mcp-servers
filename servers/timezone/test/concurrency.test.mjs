@@ -1,6 +1,7 @@
 // Two server processes on one data dir must not lose contact writes.
 // Without the advisory lock the load-mutate-save cycles interleave and each process
 // saves a contacts map that is missing the other's rows.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

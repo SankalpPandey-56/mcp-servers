@@ -1,5 +1,6 @@
 // One-shot smoke for RESULT.md: initialize, tools/list, asset_add, maintenance_log,
 // maintenance_due showing the asset. Pro key so the due report answers.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { spawn, execFileSync } from "node:child_process";
 import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";

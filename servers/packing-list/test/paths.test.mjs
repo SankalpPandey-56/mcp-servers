@@ -6,6 +6,7 @@
 // call had not returned after 25 seconds. Seven servers in this repo shipped that bug. This
 // one uses the bounded ancestor walk instead, and the /proc case is exercised HERE rather
 // than assumed, on any machine that has a /proc.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";

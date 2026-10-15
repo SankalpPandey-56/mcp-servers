@@ -1,4 +1,5 @@
 // Shared stdio JSON-RPC client for the mcp-hourly-rate suites.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { spawn, execFileSync } from "node:child_process";
 import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";

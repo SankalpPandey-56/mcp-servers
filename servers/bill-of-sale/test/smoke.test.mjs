@@ -2,6 +2,7 @@
 // create, get, update, render (draft watermark), finalize, render (signing copy), the
 // refusal of edits after finalize, summary, delete -- then the free-tier caps on drafts and
 // finalized documents, and the same calls passing in Pro.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

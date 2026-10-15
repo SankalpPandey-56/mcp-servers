@@ -5,6 +5,7 @@
  * subtotal + tax. D-R79: schedule_upcoming totalled every occurrence FOUND while listing
  * only the free-tier slice, so the total could not be added up from the rows on screen.
  */
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

@@ -1,4 +1,5 @@
 // Shared stdio JSON-RPC client for the quotes suites. Not a test file itself.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { spawn } from "node:child_process";
 import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";

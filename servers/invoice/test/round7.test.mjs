@@ -2,6 +2,7 @@
 // D-R24 - unit_price_minor x quantity must equal the stored line gross.
 // D-R28 - invoice_from_hours converts with target_currency + fx_rates and echoes entry_ids
 //         back with an instruction to close the hours in the time tracker.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

@@ -2,6 +2,7 @@
 // D-R47 - proposal_create's summary, scope, deliverables and timeline are all optional.
 // A missing (or empty) section is OMITTED from the document, never invented, and the
 // response lists which sections were left out.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

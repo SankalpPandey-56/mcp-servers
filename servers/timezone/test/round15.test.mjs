@@ -4,6 +4,7 @@
  * user what timezone they are in - a fact the shared business profile has carried since
  * D-R31, and that this same server already reads for `now` and for the ICS organizer.
  */
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

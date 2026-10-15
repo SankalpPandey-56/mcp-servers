@@ -1,5 +1,6 @@
 // D-R83: a URL handed to `path` must be refused by name, not resolved as a relative
 // filesystem path (which used to leak the server's own cwd in the error text).
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

@@ -1,6 +1,7 @@
 // Two server processes on one data dir adding and updating clauses at the same time.
 // data.json is a single file holding the whole library, so an unlocked read-modify-write
 // loses whichever write landed second. withFileLock is what makes every clause survive.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

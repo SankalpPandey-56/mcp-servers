@@ -1,6 +1,7 @@
 // End to end over stdio JSON-RPC, the way a client drives it: open a job card, log the
 // labor and the materials, walk the status flow, read the running totals, print the
 // card both ways, summarize the week, delete what is empty, and hit the free-tier cap.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

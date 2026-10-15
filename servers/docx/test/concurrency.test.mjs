@@ -1,4 +1,5 @@
 // Two server processes on one data dir must not lose documents or repeat a reference.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

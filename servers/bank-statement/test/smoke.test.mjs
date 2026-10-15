@@ -1,6 +1,7 @@
 // End to end over stdio JSON-RPC, the way a client drives it: import a real-shaped
 // 60-row export, list it, categorise it with rules, summarise it per currency, find the
 // subscription, reconcile it against a seeded expense ledger, and hit the free-tier caps.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

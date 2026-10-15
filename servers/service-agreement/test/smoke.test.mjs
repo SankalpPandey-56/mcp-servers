@@ -1,6 +1,7 @@
 // End to end over stdio JSON-RPC, the way a client drives it: initialize, tools/list,
 // write an agreement, render it (the party names must be in the render), walk the
 // status flow, run the checklist, hit the clause and HTML gates, and the free-tier cap.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

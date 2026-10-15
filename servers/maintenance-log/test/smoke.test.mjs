@@ -1,6 +1,7 @@
 // End to end over stdio JSON-RPC, the way a client drives it: add assets, log the work,
 // read the history and the due report, export both ways, remove what is empty, and hit
 // the free-tier cap.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

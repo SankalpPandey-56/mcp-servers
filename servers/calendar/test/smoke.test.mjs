@@ -1,4 +1,5 @@
 // End to end over stdio JSON-RPC, the way a client drives it.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";

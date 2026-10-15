@@ -1,6 +1,7 @@
 // D-R31: ONE business profile for the whole suite. The profile is set through invoice and
 // then read back by docx, expense-tracker and recurring, each in its OWN process, sharing
 // only XDG_DATA_HOME - exactly the way the office-suite bundle runs them.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";

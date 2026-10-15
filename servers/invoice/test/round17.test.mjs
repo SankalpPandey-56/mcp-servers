@@ -2,6 +2,7 @@
 // yet, but invoice_from_hours/invoice_create make one automatically" rather than a bare
 // "Add one with client_add", which reads to a model as "this does not exist, ask first"
 // even though the sentence it was given already named the client.
+import "../../../test/_tmp-scope.mjs"; // run-scoped TMPDIR, removed on exit
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
