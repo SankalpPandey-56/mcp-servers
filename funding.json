@@ -7,7 +7,7 @@
     "name": "AUTOM8 LLC (Zovo)",
     "email": "support@zovo.one",
     "phone": "",
-    "description": "Zovo is a bootstrapped software product studio that builds and sells privacy-first Chrome extensions and local-first developer tools. The studio is owned and run by Michael Lip, a Polish engineer and EU citizen. All code is written by one person. Zovo has raised no outside money and is funded by the founder's own engineering work and product sales. Products live at https://zovo.one and the source is published under OSI licences at https://github.com/theluckystrike. The funding requested here pays for maintenance and new releases of the two open source projects below, so the free tiers stay free and the code stays public.",
+    "description": "Zovo is a bootstrapped software product studio that builds and sells privacy-first Chrome extensions and local-first developer tools. The studio is owned and run by Michael Lip, a Polish engineer and EU citizen. Michael Lip is the sole maintainer. Zovo has raised no outside money and is funded by the founder's own engineering work and product sales. Products live at https://zovo.one and the source is published under OSI licences at https://github.com/theluckystrike. The funding requested here pays for maintenance and new releases of the two open source projects below, so the free tiers stay free and the code stays public.",
     "webpageUrl": {
       "url": "https://github.com/theluckystrike",
       "wellKnown": ""
@@ -42,7 +42,7 @@
     {
       "guid": "tab-suspender",
       "name": "Tab Suspender for Chrome",
-      "description": "An open source Manifest V3 Chrome extension that suspends inactive tabs to free memory. It protects audio tabs, pinned tabs, the active tab and tabs with unsaved form data, and it runs with no tracking and no telemetry. The code is MIT licensed and every line is inspectable in the repository. The extension ships the same code to the Chrome Web Store. Funding would pay for maintenance against Chrome platform changes, regression tests and accessibility work, so a free tab suspender without trackers stays available to users.",
+      "description": "An open source Manifest V3 Chrome extension that suspends inactive tabs to free memory. It protects audio tabs, pinned tabs and the active tab, and it runs with no tracking and no telemetry. The unsaved-form protection setting currently does not affect the background suspension decision. The code is MIT licensed and every line is inspectable in the repository. Zovo's Chrome Web Store build ships from a separate codebase. Its user count does not establish adoption of this MIT repository. Funding would pay for maintenance against Chrome platform changes, regression tests and accessibility work, so a free tab suspender without trackers stays available to users.",
       "webpageUrl": {
         "url": "https://github.com/theluckystrike/tab-suspender-chrome-extension",
         "wellKnown": ""
@@ -77,7 +77,7 @@
         "guid": "oss-maintenance-2026",
         "status": "active",
         "name": "Open source maintenance 2026",
-        "description": "One year of maintenance for the two projects above: platform fixes, regression tests, accessibility work and documentation. The founder is the only paid person. No hardware, no travel, no subcontractors.",
+        "description": "One year of maintenance for the two projects above: platform fixes, regression tests, accessibility work and documentation. The founder is the only paid person. No hardware, no travel, no subcontractors. Separate pending requests seek $3,000 from FUTO for 60 proposed hours on a standalone offline PDF core and direct CLI, and $500 from Encrata for an eight-hour Tab Suspender form-guard maintenance pass. The hours and deliverables proposed in those requests are excluded from this $10,000 plan, so the same work is not funded twice. Neither request has a confirmed award.",
         "amount": 10000,
         "currency": "USD",
         "frequency": "yearly",
