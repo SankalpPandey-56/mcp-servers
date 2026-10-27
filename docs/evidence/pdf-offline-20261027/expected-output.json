@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "checks": 18,
+  "outputPageCounts": {
+    "merge": 4,
+    "pages": 3,
+    "split1": 1,
+    "split2": 1,
+    "rotate": 2,
+    "stamp": 2
+  },
+  "fixtureHashes": {
+    "a": "af1ece035a9bd3c6da47439c7782c024c02be85ae16366e97ba2977a6c78f507",
+    "b": "5461bc5c56ab975d97b45c56898c4729b2ac8b4b9d6a0d00de27b040adafa733"
+  }
+}
