@@ -77,7 +77,7 @@
         "guid": "oss-maintenance-2026",
         "status": "active",
         "name": "Open source maintenance 2026",
-        "description": "One year of maintenance for the two projects above: platform fixes, regression tests, accessibility work and documentation. The founder is the only paid person. No hardware, no travel, no subcontractors. Separate pending requests seek $3,000 from FUTO for 60 proposed hours on a standalone offline PDF core and direct CLI, and $500 from Encrata for an eight-hour Tab Suspender form-guard maintenance pass. The hours and deliverables proposed in those requests are excluded from this $10,000 plan, so the same work is not funded twice. Neither request has a confirmed award.",
+        "description": "One year of maintenance for both projects covers platform fixes, regression tests, accessibility and docs. Michael Lip is the only paid person. No hardware, travel or subcontractors. Pending requests seek $3,000 from FUTO for 60 hours on a standalone offline PDF core and direct CLI, and $500 from Encrata for an eight-hour Tab Suspender form-guard pass. Those hours and deliverables are excluded from this $10,000 plan; no work is funded twice. Neither request has a confirmed award.",
         "amount": 10000,
         "currency": "USD",
         "frequency": "yearly",
