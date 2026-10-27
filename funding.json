@@ -42,7 +42,7 @@
     {
       "guid": "tab-suspender",
       "name": "Tab Suspender for Chrome",
-      "description": "An open source Manifest V3 Chrome extension that suspends inactive tabs to free memory. It protects audio tabs, pinned tabs and the active tab, and it runs with no tracking and no telemetry. The unsaved-form protection setting currently does not affect the background suspension decision. The code is MIT licensed and every line is inspectable in the repository. Zovo's Chrome Web Store build ships from a separate codebase. Its user count does not establish adoption of this MIT repository. Funding would pay for maintenance against Chrome platform changes, regression tests and accessibility work, so a free tab suspender without trackers stays available to users.",
+      "description": "An open source Manifest V3 Chrome extension that suspends inactive tabs to free memory. It runs with no tracking and no telemetry. The popup's manual suspension path currently bypasses allowlist, pinned-tab and audio checks. The unsaved-form protection setting currently does not affect the background suspension decision. The code is MIT licensed and every line is inspectable in the repository. Zovo's Chrome Web Store build ships from a separate codebase. Its user count does not establish adoption of this MIT repository. Funding would pay for maintenance against Chrome platform changes, regression tests and accessibility work, so a free tab suspender without trackers stays available to users.",
       "webpageUrl": {
         "url": "https://github.com/theluckystrike/tab-suspender-chrome-extension",
         "wellKnown": ""
