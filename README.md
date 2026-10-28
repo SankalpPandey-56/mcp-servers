@@ -6,6 +6,8 @@
 ![Release](https://img.shields.io/badge/release-v0.25.0-informational)
 <!-- /gen:badge -->
 
+> **[All 58 servers, one page — what each does, its tools and its price](https://theluckystrike.github.io/mcp/)** &middot; free locally (MIT), one-time licence for the hosted endpoints &middot; [bundle](https://mcp.zovo.one/buy/bundle)
+
 Practical Model Context Protocol servers for people who work inside Claude, Cursor and other MCP clients.
 Every server runs locally over stdio, keeps all data on your machine, and has a genuinely useful free tier.
 Pro unlocks the limits for a one-time payment: $19 per server or $39 for the bundle, lifetime.
