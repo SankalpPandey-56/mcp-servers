@@ -7,6 +7,9 @@
   "bin": {
     "mcp-tax-calc": "src/index.js"
   },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4",
     "zod": "^3.23.8"

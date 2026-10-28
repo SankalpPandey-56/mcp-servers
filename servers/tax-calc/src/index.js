@@ -1,18 +1,6 @@
 #!/usr/bin/env node
 import { serve, money } from './_shared.js';
-
-// 2026 US federal brackets (single filer, approximate planning values)
-const BRACKETS = [
-  [11925, 0.10], [48475, 0.12], [103350, 0.22], [197300, 0.24],
-  [250525, 0.32], [626350, 0.35], [Infinity, 0.37],
-];
-const STD_DEDUCTION = 15750;
-
-function tax(taxable) {
-  let t = 0, prev = 0;
-  for (const [cap, rate] of BRACKETS) { if (taxable > prev) { t += (Math.min(taxable, cap) - prev) * rate; prev = cap; } else break; }
-  return t;
-}
+import { BRACKETS, STD_DEDUCTION, tax, marginalRate, calculateTax } from './tax.js';
 
 serve('mcp-tax-calc', '1.0.0', [
   {
@@ -20,9 +8,22 @@ serve('mcp-tax-calc', '1.0.0', [
     desc: 'Estimate 2026 US federal income tax (single filer, standard deduction): gross annual income.',
     schema: { type: 'object', properties: { gross_income: { type: 'number' } }, required: ['gross_income'] },
     handler: async ({ gross_income }) => {
-      const taxable = Math.max(0, gross_income - STD_DEDUCTION);
-      const t = tax(taxable);
-      return { content: [{ type: 'text', text: `Taxable income: $${money(taxable)}\nEstimated federal tax: $${money(t)}\nEffective rate: ${(100 * t / gross_income).toFixed(1)}%\nAfter-tax: $${money(gross_income - t)}` }] };
+      if (typeof gross_income !== 'number' || !Number.isFinite(gross_income) || gross_income < 0) {
+        return {
+          isError: true,
+          content: [{ type: 'text', text: 'Error: gross_income must be a finite, non-negative number.' }],
+        };
+      }
+
+      const { taxable, tax: t, effectiveRate, marginalRate: marginal, afterTax } = calculateTax(gross_income);
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `Taxable income: $${money(taxable)}\nEstimated federal tax: $${money(t)}\nEffective rate: ${effectiveRate.toFixed(1)}%\nMarginal rate: ${(marginal * 100).toFixed(1)}%\nAfter-tax: $${money(afterTax)}`,
+          },
+        ],
+      };
     },
   },
 ]);
